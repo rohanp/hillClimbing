@@ -1,5 +1,3 @@
-__author__ = "Rohan Pandit"
-
 from math import pi, sqrt, hypot
 from math import sin, cos
 #from lookup import tableSin, tableCos as sin, cos
