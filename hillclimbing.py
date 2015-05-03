@@ -69,7 +69,7 @@ def nelder_mead_recur(a, b, c):
 			a = d
 	else:
 		fvar = (-2 * a[0] + 3/4 * (b[0]+c[0]), -2 * a[1] + 3/4 * (b[1]+c[1]))
-		g = (2 * a[0] + 2 * (b[0] + c[0]), 2 * a[1] + 2 * (b[1] + c[1])  )
+		g = (2 * a[0] + 2 * (b[0] + c[0]), 2 * a[1] + 2 * (b[1] + c[1]) )
 		if f(*fvar) < initial:
 			a = f
 		if f(*g) < f(*a):
@@ -78,7 +78,7 @@ def nelder_mead_recur(a, b, c):
 			m = ( (b[0] + c[0])/2, (b[1]+c[1])/2 )
 			a, b = c, m
 
-	if dist(orginal_a, a) > 0.1 and area(a, b, c) > 0.01:
+	if dist(orginal_a, a) > 0.1:
 		return nelder_mead_recur(a, b, c)
 	else:
 		return a
